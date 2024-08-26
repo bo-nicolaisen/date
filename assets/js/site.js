@@ -9,8 +9,8 @@ function showDateElement() {
     let endDay = 0
     let date = new Date()
 
-    let curentday = 0// date.getDay()
-    console.log(curentday);
+    let curentday = date.getDay()
+
 
     // start day
     if (curentday > 1) {
@@ -25,22 +25,24 @@ function showDateElement() {
         startDay = 5
     }
 
-    // end day
-    if (curentday < 4) {
-        endDay = curentday + 2
+
+
+
+    for (let index = 0; index < 5; index++) {
+        console.log(week[startDay]);
+
+        startDay = startDay + 1
+
+        if (startDay > 6) {
+            startDay = 0
+        }
+
+
     }
 
-    if (curentday == 5) {
-        endDay = 0
-    }
-
-    if (curentday == 6) {
-        endDay = 1
-    }
 
 
 
-    console.log(startDay, endDay);
 
 
 }
